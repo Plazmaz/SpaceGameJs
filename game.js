@@ -27,16 +27,16 @@ loadScore();
 var shooting = false;
 var laserlength=height-2/20;
 
-playerimg.src = "/Spaceship.png";
-turbobossimg.src ="/TheBOSS.png";
-enimg.src = "/Enemy.png";
-bossimg.src = "/Boss.png";
-mosbossimg.src = "/MosquitoBoss.png";
-bbbimg.src = "/TheBBB.png";
+playerimg.src = "https://github.com/Plazmaz/SpaceGameJs/blob/master/Spaceship.png?raw=true";
+turbobossimg.src ="https://github.com/Plazmaz/SpaceGameJs/blob/master/TheBOSS.png?raw=true";
+enimg.src = "https://github.com/Plazmaz/SpaceGameJs/blob/master/Enemy.png?raw=true";
+bossimg.src = "https://github.com/Plazmaz/SpaceGameJs/blob/master/Boss.png?raw=true";
+mosbossimg.src = "https://github.com/Plazmaz/SpaceGameJs/blob/master/MosquitoBoss.png?raw=true";
+bbbimg.src = "https://github.com/Plazmaz/SpaceGameJs/blob/master/TheBBB.png?raw=true";
 var bg = new Image();
 var texty = height / 2;
 var textx = width / 2 - 180;
-bg.src = "/StarField.png";
+bg.src = "https://sites.google.com/a/mountainmiddleschool.org/studentdp-s93id3da1yocae7eplglaw/my_programming/file-storage/StarField.png";
 setInterval(draw, 50);
 var textoffset = 0;
 var pcomp = false,
@@ -702,19 +702,5 @@ function rainbow(x,y,targx,targy,enemy) {
                 }
             }
         }
-    }
-}
-function initiateLoginSequence() {
-    var isnewplayer=prompt("Hello! Are you new?(Y/N)");
-    if(isnewplayer.equalsIgnoreCase("N")) {
-        var username = prompt("Enter username.");
-        var password = prompt("Enter Password.");
-    } else {
-        var username = prompt("Enter a username. This will be used for future logins.");
-        var password = prompt("Enter a password. This will be used for future logins.","*");
-        var req = new XMLHttpRequest();  
-        req.open('POST', 'http://69.144.34.106/Scores.php', true);   
-        req.send("returning=false"+"&name="+username+"&pw="+password+"&level="+lvl+"&save=true");
-        req.send();
     }
 }
